@@ -13,7 +13,7 @@
 - Zoznam výdavkov
   Prehľadný zoznam od najnovšieho. Výdavok môžem otvoriť, upraviť alebo zmazať.
 - Prehľad
-  Súčet za vybraný mesiac a rozdelenie podľa kategórií (jednoduchý graf alebo zoznam s percentami).
+  Súčet za vybraný mesiac a rozdelenie podľa kategórií (kruhový graf rozdelenia výdavkov podľa kategórií).
 
 ## Čo v MVP nebude (non-goals)
 - Fotenie bločkov a automatické čítanie (OCR). Dôvod: Je to technicky náročné a nie je potrebné na vyriešenie hlavného problému. Sumu viem zadať ručne.
@@ -29,5 +29,5 @@
 - Rozhranie: React Native + TypeScript (obrazovky aplikácie)
 - Zostavenie a spustenie: Expo (aplikáciu testujem priamo v telefóne cez Expo Go)
 - Lokálna databáza: SQLite cez expo-sqlite (výdavky a kategórie uložené v telefóne)
-- Graf prehľadu: knižnica react-native-gifted-charts (alebo jednoduchý zoznam s percentami)
+- Graf prehľadu: knižnica react-native-gifted-charts (kruhový graf)
 - Nástroje: VS Code, Node.js, Git + GitHub (písanie kódu a verzie projektu)
