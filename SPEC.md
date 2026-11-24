@@ -11,7 +11,7 @@
 
 ## Funkcie
 
-Číslovanie zodpovedá user stories v súbore `BACKLOG.md`.
+Číslovanie zodpovedá user stories v súbore `BACKLOG.md`. Akceptačné kritériá a testy ku každej funkcii sú v `BACKLOG.md`.
 
 1. Zápis výdavku
    - 1.1 Športovec môže pridať výdavok so sumou, dátumom a kategóriou.
@@ -26,7 +26,7 @@
    - 3.3 Športovec môže výdavok zmazať po potvrdení.
 4. Prehľad výdavkov
    - 4.1 Športovec vidí súčet výdavkov za vybraný mesiac a môže prepínať medzi mesiacmi.
-   - 4.2 Športovec vidí rozdelenie výdavkov podľa kategórií v kruhovom grafe s legendou, kde je pri každej kategórii suma a percento.
+   - 4.2 Športovec vidí rozdelenie výdavkov podľa kategórií v kruhovom grafe s legendou, kde je pri každej kategórii suma a percento. Keď v mesiaci nie sú výdavky, namiesto grafu vidí text o prázdnom mesiaci.
 
 ## Obmedzenia
 
@@ -36,6 +36,20 @@
 - Platforma: mobilná aplikácia (Android a iOS z jedného kódu), v prvej verzii testovaná cez Expo Go.
 - Dáta sú uložené len v telefóne, aplikácia funguje bez internetu.
 - Aplikácia nepotrebuje špeciálny hardvér (kameru, GPS ani senzory).
+
+## Rozhodnutia
+
+Otázky, ktoré vznikli pri písaní špecifikácie, sú pre prvú verziu rozhodnuté takto. `DESIGN.md` z týchto rozhodnutí vychádza.
+
+| Otázka | Rozhodnutie pre prvú verziu |
+|---|---|
+| Dajú sa zapisovať opakované výdavky (napríklad mesačné členské)? | Nie. Každý výdavok sa zapíše zvlášť. Opakované výdavky môžu pribudnúť neskôr. |
+| Dá sa zmazať kategória (základná aj vlastná)? | Nie. Kategórie sa v prvej verzii nedajú zmazať ani premenovať. Preto nikdy nevznikne výdavok bez kategórie. |
+| Čo sa stane s výdavkami pri zmazaní kategórie? | V prvej verzii nenastane, pretože kategórie sa nemažú. |
+| Je prehľad len za jeden mesiac, alebo aj za sezónu či rok? | Len za jeden mesiac s prepínaním medzi mesiacmi. |
+| Dajú sa výdavky rozdeliť podľa športu? | Nie. Aplikácia eviduje výdavky bez rozlíšenia športu. |
+| Čo sa zobrazí v grafe, keď sú v mesiaci nulové výdavky? | Namiesto grafu sa zobrazí text „V tomto mesiaci nemáš žiadne výdavky" a súčet 0,00 €. |
+| Dá sa zadať dátum v budúcnosti? | Áno (napríklad vopred zaplatené štartovné). |
 
 ## Mimo rozsahu
 
@@ -47,13 +61,8 @@ V prvej verzii úmyselne nie je:
 - viac mien a prepočet kurzov,
 - export do Excelu alebo PDF a záloha dát,
 - zdieľanie s trénerom alebo rodičmi,
-- zverejnenie v Google Play a App Store.
-
-## Otvorené otázky
-
-- Majú sa dať zapisovať aj opakované výdavky (napríklad mesačné členské)? Alebo stačí každý výdavok zapísať zvlášť?
-- Čo sa stane s výdavkami, keď športovec zmaže vlastnú kategóriu? Zmažú sa spolu s ňou, alebo sa presunú do kategórie „iné"?
-- Dá sa zmazať aj základná kategória, alebo len vlastná?
-- Má byť prehľad vždy len za jeden mesiac, alebo aj za celú sezónu či rok?
-- Zapisuje sa len jeden šport, alebo má mať športovec možnosť výdavky rozdeliť podľa športu?
-- Čo sa zobrazí v grafe, keď sú v mesiaci nulové výdavky?”
+- zverejnenie v Google Play a App Store,
+- opakované výdavky,
+- mazanie a premenovanie kategórií,
+- prehľad za sezónu alebo rok,
+- rozdelenie výdavkov podľa športu.

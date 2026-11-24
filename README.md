@@ -23,6 +23,27 @@
 - Export do Excelu / PDF a záloha dát. Dôvod: Dáta sú zatiaľ len v jednom telefóne. Export príde, keď bude appku používať viac ľudí.
 - Zdieľanie s trénerom alebo rodičmi. Dôvod: Vyžadovalo by to účty a server.
 - Zverejnenie aplikácie na internete. Dôvod: Aplikácia je zatiaľ len školský projekt a beží len u mňa.
+- Opakované výdavky. Dôvod: Mesačné členské viem zapísať aj ručne raz za mesiac.
+- Mazanie a premenovanie kategórií. Dôvod: Netreba riešiť, čo sa stane s výdavkami zmazanej kategórie.
+- Prehľad za sezónu alebo rok a rozdelenie podľa športu. Dôvod: Na hlavný problém stačí mesačný prehľad.
+
+## Dokumenty projektu
+- `SPEC.md`: špecifikácia a rozhodnutia
+- `BACKLOG.md`: user stories s akceptačnými kritériami a testami
+- `DESIGN.md`: dátový model, API, obrazovky, štruktúra projektu
+
+## Spustenie
+
+```bash
+npm install
+npx expo start
+```
+
+V telefóne otvoriť aplikáciu Expo Go a naskenovať QR kód z terminálu (telefón a počítač musia byť na rovnakej Wi-Fi).
+
+Unit testy: `npx jest`
+
+Pozor: dáta sú uložené iba v Expo Go v telefóne. Po vymazaní dát alebo odinštalovaní Expo Go sa výdavky stratia.
 
 ## Aké technológie potrebujem
 - Platforma: mobilná aplikácia (Android a iOS z jedného kódu)
@@ -30,4 +51,5 @@
 - Zostavenie a spustenie: Expo (aplikáciu testujem priamo v telefóne cez Expo Go)
 - Lokálna databáza: SQLite cez expo-sqlite (výdavky a kategórie uložené v telefóne)
 - Graf prehľadu: knižnica react-native-gifted-charts (kruhový graf)
+- Testy: Jest (jest-expo) na unit testy pomocných funkcií
 - Nástroje: VS Code, Node.js, Git + GitHub (písanie kódu a verzie projektu)
